@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ahsan Rehman</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+
+.navigator {
+    background-color: #222;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.nav-link {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link a {
+    color: rgb(243, 255, 16);
+    text-decoration: none;
+    background-color:#2670c4;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-link a:hover {
+    background-color:#e62525;
+    transform: scale(1.2) skew(10deg);
+}
+
+hr {
+    border: none;
+}
+
+/* Main Layout */
+
+.container {
+    width: 95%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    gap: 20px;
+}
+
+/* Left Aside */
+
+.left {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.left:hover{
+    background-color: #e8f0fe;
+    transform: scale(1.03);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.profile img:hover{
+    transform: scale(1.5);
+}
+.profile h2 {
+    margin-top: 10px;
+}
+
+.left h3 {
+    margin-bottom: 10px;
+}
+
+.Introduction,
+.Personal-Information,
+.Contact,
+.Social-Links {
+    margin-bottom: 25px;
+}
+
+.left ul {
+    padding-left: 20px;
+}
+
+.left a {
+    color: #333;
+}
+
+/* Main Content */
+
+.main {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.main:hover{
+    background-color: #dbeafe;
+    transform: scale(1.03);
+}
+
+.main section {
+    margin-bottom: 40px;
+}
+
+.main h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+/* Home */
+
+#home h2 {
+    font-size: 35px;
+    color: #222;
+}
+
+#home h3 {
+    margin-bottom: 15px;
+}
+
+#home a {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+#home a:hover {
+    background-color: #c41515;
+    transform: scale(1.2)
+}
+
+/* Skills */
+
+.skill-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.skill-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition:all 0.2s ease;
+}
+
+.skill-card:hover {
+    background-color: #6168c2;
+    transform: scale(1.2) skew(-5deg);
+}
+
+/* Projects */
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    background-color:#bff3a7;
+    color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.project-card:hover{
+    background-color: rgb(126, 240, 13);
+    transform: scale(1.1);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #ca4e4e;
+    color: rgb(231, 231, 218);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.1s ease;
+}
+.project-card a:hover{
+    background-color: #3a2c2c;
+    transform: scale(1.2) skew(-5deg);
+}
+/* Education */
+
+.education-card {
+    background-color:  #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.education-card h3 {
+    margin-bottom: 10px;
+}
+
+.education-card:hover{
+    background-color: rgb(243, 229, 147);
+    transform: scale(1.1);
+}
+
+/* Goals */
+
+.goal-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.goal-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.goal-card:hover{
+    background-color: rgb(99, 99, 236);
+    transform: scale(1.1);
+}
+
+.goal-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.form-group input:hover,
+.form-group textarea:hover{
+    background-color: #65e6b4;
+    transform: scale(1.05) skew(5deg);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: #c41515;
+    transform: scale(1.2)
+}
+
+/* Right Aside */
+
+.right {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.right:hover{
+    background-color: #e8f0fe;
+    transform: scale(1.03);
+}
+.right section {
+    margin-bottom: 25px;
+}
+
+.right h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.right ul {
+    padding-left: 20px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.footer-content h2 {
+    margin-bottom: 5px;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+.footer-links a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding : 5px 10px;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: #e2703b;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    background-color:#f31f1f;
+    transform: scale(1.5) skew(5deg);
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-container,
+    .goal-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .navigator {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-link {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill-container,
+    .project-container,
+    .goal-container {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+
+<!-- Navigation Bar -->
+
+<nav class="navigator">
+    <div class="logo">
+        <h1>Ahsan Rehman Khan</h1>
+    </div>
+    <div class="nav-link">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+<hr>
+
+<!-- Main Layout -->
+<div class="container">
+
+    <!-- Left Aside -->
+    <aside class="left">
+        <div class="profile">
+            <img src="image.jpg" alt="Ahsan">
+            <h2>Ahsan Rehman Khan</h2>
+            <p>Software Engineering Student</p>
+        </div>
+        <div class="Introduction">
+            <h3>Introduction</h3>
+            <p>
+                I am a Software Engineering student passionate
+                about software development, artificial
+                intelligence, and modern technologies.
+            </p>
+        </div>
+        <div class="Personal-Information">
+            <h3>Personal Information</h3>
+            <ul>
+                <li><strong>Degree:</strong> BS Software Engineering</li>
+                <li><strong>University:</strong> COMSATS University Islamabad</li>
+                <li><strong>Campus:</strong> Attock Campus</li>
+                <li><strong>Field:</strong> Software Engineering</li>
+            </ul>
+        </div>
+        <div class="Contact">
+            <h3>Contact</h3>
+            <ul>
+                <li><strong>Email:</strong> abc@gmail.com</li>
+                <li><strong>Location:</strong> Pakistan, District Mianwali</li>
+            </ul>
+        </div>
+        <div class="Social-Links">
+            <h3>Social Links</h3>
+            <ul>
+                <li>
+                    <a href="https://github.com/">GitHub</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Home Section -->
+        <section id="home">
+            <p>Hi, I'm</p>
+            <h2>Ahsan Rehman</h2>
+            <h3>Software Engineering Student & AI Enthusiast</h3>
+            <p>
+                I am passionate about building software
+                applications and exploring Artificial
+                Intelligence, Machine Learning, and
+                Web Development.
+            </p>
+            <a href="#projects">View My Projects</a>
+            <a href="#contact">Contact Me</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a Software Engineering student at
+                COMSATS University Islamabad, Attock Campus.
+                I am interested in programming, software
+                development, and Artificial Intelligence.
+            </p>
+            <p>
+                My goal is to improve my technical skills
+                and develop innovative software solutions
+                that solve real-world problems.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skill-container">
+
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Web Page Structure</p>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Web Page Styling</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Java</h3>
+                    <p>Object-Oriented Programming</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Python</h3>
+                    <p>Programming and AI</p>
+                </div>
+                <div class="skill-card">
+                    <h3>SQL</h3>
+                    <p>Database Management</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Prolog</h3>
+                    <p>Logic Programming</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-container">
+
+                <article class="project-card">
+                    <h3>Student Management System</h3>
+                    <p>
+                        A system designed to manage student
+                        records, personal information,
+                        and academic data.
+                    </p>
+                    <p>
+                        <strong>Technologies:</strong>
+                        Java, Data Structures
+                    </p>
+                    <a href="#">View Project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>Student Advisory System</h3>
+                    <p>
+                        A rule-based system that provides
+                        subject and career recommendations
+                        based on students' interests
+                        and skills.
+                    </p>
+                    <p>
+                        <strong>Technologies:</strong>
+                        SWI-Prolog
+                    </p>
+                    <a href="#">View Project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>Machine Learning Project</h3>
+                    <p>
+                        A machine learning project focused
+                        on dataset analysis and classification
+                        using the KNN algorithm.
+                    </p>
+                    <p>
+                        <strong>Technologies:</strong>
+                        Python, Pandas, KNN
+                    </p>
+                    <a href="#">View Project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>Student Management Website</h3>
+                    <p>
+                        A web-based application for adding,
+                        displaying, and deleting student
+                        records.
+                    </p>
+                    <p>
+                        <strong>Technologies:</strong>
+                        HTML, CSS, JavaScript
+                    </p>
+                    <a href="#">View Project</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-card">
+                <h3>Bachelor of Science in Software Engineering</h3>
+                <p>COMSATS University Islamabad</p>
+                <p>Attock Campus</p>
+                <p>Department of Software Engineering</p>
+                <p>Current Status: Undergraduate Student</p>
+            </div>
+        </section>
+
+        <!-- Goals Section -->
+        <section id="goals">
+            <h2>My Career Goals</h2>
+            <div class="goal-container">
+
+                <article class="goal-card">
+                    <h3>Software Engineering</h3>
+                    <p>
+                        To become a professional software
+                        engineer and develop reliable
+                        software applications.
+                    </p>
+                </article>
+
+                <article class="goal-card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>
+                        To learn Machine Learning,
+                        Deep Learning, NLP, and
+                        Generative AI.
+                    </p>
+                </article>
+
+                <article class="goal-card">
+                    <h3>Real-World Projects</h3>
+                    <p>
+                        To build practical projects
+                        that solve real-world problems.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>
+                Have a project idea or want to connect?
+                Feel free to contact me.
+            </p>
+
+            <form>
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+</main>
+
+    <!-- Right Aside -->
+    <aside class="right">
+
+        <!-- Technical Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>Prolog</li>
+            </ul>
+        </section>
+
+        <!-- Technologies -->
+        <section>
+            <h2>Technologies</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Machine Learning</li>
+                <li>Database Management</li>
+                <li>Object-Oriented Programming</li>
+            </ul>
+        </section>
+
+        <!-- Development Tools -->
+        <section>
+            <h2>Development Tools</h2>
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Oracle</li>
+                <li>SWI-Prolog</li>
+            </ul>
+        </section>
+
+        <!-- Interests -->
+        <section>
+            <h2>Interests</h2>
+            <ul>
+                <li>Artificial Intelligence</li>
+                <li>Machine Learning</li>
+                <li>Web Development</li>
+                <li>Software Development</li>
+                <li>Problem Solving</li>
+            </ul>
+        </section>
+    </aside>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <h2>Ahsan Rehman</h2>
+        <p>
+            Software Engineering Student |
+            AI Enthusiast
+        </p>
+
+        <div class="footer-links">
+            <a href="https://github.com/">GitHub</a>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p>
+            &copy; 2026 Ahsan Rehman.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
